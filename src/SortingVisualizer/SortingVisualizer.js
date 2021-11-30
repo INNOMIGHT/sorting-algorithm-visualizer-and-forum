@@ -9,11 +9,11 @@ import {getBubbleSortAnimations} from '../SortingAlgorithms/BubbleSort';
 //Changing width,height accordingly with the browser
 let WINDOW_WIDTH = window.innerWidth;
 let WINDOW_HEIGHT = window.innerHeight;
-let NUMBER_OF_ARRAY_BARS = 58;
+let NUMBER_OF_ARRAY_BARS = 90;
 
 
-const PRIMARY_COLOR = 'turquoise'; //Normal color of bars
-const SECONDARY_COLOR = 'red'; //Color of bars when they are being compared
+const PRIMARY_COLOR = 'orange'; //Normal color of bars
+const SECONDARY_COLOR = 'turquoise'; //Color of bars when they are being compared
 const ANIMATION_SPEED_MS = 5; //Animation Speed (how fast color changes, how fast height gets overwritten)
 
 //Tooltips for buttons
@@ -275,9 +275,12 @@ class SortingVisualizer extends React.Component {
             </div>
             <div className="buttons" > 
                 <button title="Generates a new random array" style={{position:'relative',top:`${0*(WINDOW_HEIGHT-20)/TOTAL_BUTTONS}px`}} onClick={() => this.resetArray()}>
+                    Algorithms Forum
+                </button>
+                <button title="Generates a new random array" style={{position:'relative',top:`${0.5*(WINDOW_HEIGHT-20)/TOTAL_BUTTONS}px`}} onClick={() => this.resetArray()}>
                     Generate New Array
                 </button>
-                <button title="O(NlogN) Time Complexity" id = "mergeSort" style={{position:'relative',top:`${0.5*(WINDOW_HEIGHT-20)/TOTAL_BUTTONS}px`}} onClick={() => this.mergeSort()}>
+                <button title="O(NlogN) Time Complexity" id = "mergeSort" style={{position:'relative',top:`${1*(WINDOW_HEIGHT-20)/TOTAL_BUTTONS}px`}} onClick={() => this.mergeSort()}>
                     Merge Sort
                 </button>
                 <button title="O(N^2) Time Complexity" id = "quickSort" style={{position:'relative',top:`${1.5*(WINDOW_HEIGHT-20)/TOTAL_BUTTONS}px`}} onClick={() => this.quickSort()}>
